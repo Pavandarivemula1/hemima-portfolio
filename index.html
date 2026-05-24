@@ -161,6 +161,46 @@
     .btn-secondary { background: transparent; color: var(--ink); }
     .btn-secondary:hover { background: var(--white); }
 
+    .resume-dropdown {
+      position: relative;
+      display: inline-flex;
+    }
+
+    .resume-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 190px;
+      background: var(--card);
+      border: 1px solid var(--ink);
+      box-shadow: 8px 8px 0 rgba(122, 79, 42, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: 0.2s ease;
+      z-index: 80;
+    }
+
+    .resume-dropdown:hover .resume-menu,
+    .resume-dropdown:focus-within .resume-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .resume-menu a {
+      display: block;
+      padding: 13px 16px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .resume-menu a:last-child { border-bottom: none; }
+    .resume-menu a:hover { background: var(--soft); }
+
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -414,7 +454,13 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="mailto:hdarivemula@gmail.com">Get in Touch</a>
-          <a class="btn btn-secondary" href="resume.html">📄 Download Resume</a>
+          <div class="resume-dropdown">
+            <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">Download Resume</button>
+            <div class="resume-menu" role="menu" aria-label="Resume download options">
+              <a href="src/Hemima_resume.pdf" download role="menuitem">PDF</a>
+              <a href="src/Hemima_resume.docx" download role="menuitem">DOCX</a>
+            </div>
+          </div>
         </div>
         <div class="stats">
           <div class="stat">
