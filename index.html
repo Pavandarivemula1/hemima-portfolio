@@ -1,641 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hemima Darivemula | Teacher Portfolio</title>
-  <meta name="description" content="Professional teacher portfolio website for Hemima Darivemula, B.Tech CSE(AIML) graduate interested in Mathematics, Computer Science and Basic Science teaching." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f5f1ea;
-      --card: #fffaf2;
-      --ink: #151515;
-      --muted: #68645f;
-      --line: #d8d0c4;
-      --accent: #7a4f2a;
-      --accent-dark: #3d2817;
-      --soft: #eee4d5;
-      --white: #ffffff;
-      --shadow: 0 24px 70px rgba(36, 24, 12, 0.12);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>Hemima Darivemula | AIML Engineer Portfolio</title>
 
-    html { scroll-behavior: smooth; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.6;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    a { color: inherit; text-decoration: none; }
+<style>
 
-    .page {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-    }
+:root{
+--bg:#f5f1ea;
+--card:#fffaf2;
+--ink:#151515;
+--muted:#68645f;
+--line:#d8d0c4;
+--accent:#7a4f2a;
+--white:#fff;
+}
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(245, 241, 234, 0.84);
-      border-bottom: 1px solid rgba(216, 208, 196, 0.75);
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+body{
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:var(--ink);
+line-height:1.6;
+}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
+.page{
+width:min(1180px,calc(100%-40px));
+margin:auto;
+}
 
-    .brand-mark {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      background: var(--ink);
-      color: var(--white);
-      border-radius: 0;
-      font-size: 14px;
-      letter-spacing: -0.02em;
-    }
+a{
+text-decoration:none;
+color:inherit;
+}
 
-    .links {
-      display: flex;
-      gap: 26px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
+.topbar{
+position:sticky;
+top:0;
+background:rgba(245,241,234,.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+z-index:10;
+}
 
-    .links a:hover { color: var(--ink); }
+.nav{
+height:75px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .hero {
-      min-height: calc(100vh - 76px);
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-      padding: 76px 0 64px;
-    }
+.brand{
+display:flex;
+gap:10px;
+font-weight:800;
+}
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 242, 0.65);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent-dark);
-      margin-bottom: 24px;
-    }
+.brand-mark{
+width:40px;
+height:40px;
+background:black;
+color:white;
+display:grid;
+place-items:center;
+}
 
-    .dot {
-      width: 8px;
-      height: 8px;
-      background: var(--accent);
-      border-radius: 999px;
-    }
+.links{
+display:flex;
+gap:20px;
+}
 
-    h1 {
-      font-size: clamp(48px, 7vw, 86px);
-      line-height: 0.94;
-      letter-spacing: -0.075em;
-      max-width: 760px;
-      margin-bottom: 26px;
-    }
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:50px;
+align-items:center;
+padding:70px 0;
+}
 
-    .lead {
-      font-size: clamp(18px, 2vw, 22px);
-      color: var(--muted);
-      max-width: 720px;
-      margin-bottom: 34px;
-    }
+.eyebrow{
+padding:10px;
+display:inline-flex;
+gap:10px;
+border:1px solid var(--line);
+margin-bottom:25px;
+font-size:12px;
+font-weight:800;
+text-transform:uppercase;
+}
 
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 46px;
-    }
+.dot{
+width:8px;
+height:8px;
+background:var(--accent);
+border-radius:50%;
+}
 
-    .btn {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 20px;
-      border: 1px solid var(--ink);
-      font-size: 14px;
-      font-weight: 800;
-      transition: 0.2s ease;
-    }
+h1{
+font-size:78px;
+line-height:.95;
+margin-bottom:25px;
+}
 
-    .btn-primary { background: var(--ink); color: var(--white); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 8px 8px 0 var(--accent); }
-    .btn-secondary { background: transparent; color: var(--ink); }
-    .btn-secondary:hover { background: var(--white); }
+.lead{
+font-size:20px;
+color:var(--muted);
+margin-bottom:30px;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 242, 0.5);
-    }
+.hero-actions{
+display:flex;
+gap:15px;
+margin-bottom:40px;
+}
 
-    .stat {
-      padding: 22px;
-      border-right: 1px solid var(--line);
-    }
+.btn{
+padding:14px 20px;
+border:1px solid black;
+font-weight:700;
+}
 
-    .stat:last-child { border-right: none; }
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      letter-spacing: -0.05em;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .stat span { font-size: 13px; color: var(--muted); font-weight: 600; }
+.btn-primary{
+background:black;
+color:white;
+}
 
-    .profile-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      padding: 22px;
-    }
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+border:1px solid var(--line);
+}
 
-    .portrait {
-      aspect-ratio: 4 / 5;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(122, 79, 42, 0.25), transparent 34%),
-        linear-gradient(145deg, #efe2cf, #d7c5ae);
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      margin-bottom: 18px;
-      overflow: hidden;
-    }
+.stat{
+padding:20px;
+border-right:1px solid var(--line);
+}
 
-    .portrait img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.profile-card{
+background:var(--card);
+padding:20px;
+border:1px solid var(--line);
+}
 
-    .portrait-inner {
-      width: 72%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: var(--ink);
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      font-size: clamp(44px, 8vw, 82px);
-      font-weight: 800;
-      letter-spacing: -0.08em;
-    }
+.portrait img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
 
-    .profile-meta { display: grid; gap: 12px; }
+.meta-row{
+display:flex;
+justify-content:space-between;
+padding:12px 0;
+border-bottom:1px solid var(--line);
+}
 
-    .meta-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-      font-size: 14px;
-    }
+section{
+padding:80px 0;
+border-top:1px solid var(--line);
+}
 
-    .meta-row span:first-child { color: var(--muted); font-weight: 700; }
-    .meta-row span:last-child { text-align: right; font-weight: 800; }
+.section-head{
+margin-bottom:40px;
+}
 
-    section {
-      padding: 86px 0;
-      border-top: 1px solid var(--line);
-    }
+.label{
+font-size:13px;
+font-weight:800;
+color:var(--accent);
+text-transform:uppercase;
+margin-bottom:10px;
+}
 
-    .section-head {
-      display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 54px;
-      margin-bottom: 44px;
-    }
+h2{
+font-size:50px;
+margin-bottom:15px;
+}
 
-    .label {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--accent);
-      font-weight: 900;
-    }
+.grid-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
 
-    h2 {
-      font-size: clamp(34px, 4vw, 56px);
-      line-height: 1;
-      letter-spacing: -0.06em;
-    }
+.card{
+background:var(--card);
+padding:25px;
+border:1px solid var(--line);
+}
 
-    .section-copy {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 760px;
-    }
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
+.skill{
+padding:10px 15px;
+background:var(--card);
+border:1px solid var(--line);
+font-weight:700;
+}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      padding: 26px;
-      min-height: 220px;
-      transition: 0.2s ease;
-    }
+.projects{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
 
-    .card:hover { transform: translateY(-4px); box-shadow: 10px 10px 0 rgba(122, 79, 42, 0.18); }
-    .card-number { font-size: 12px; font-weight: 900; color: var(--accent); letter-spacing: 0.12em; margin-bottom: 22px; }
-    .card h3 { font-size: 22px; letter-spacing: -0.04em; margin-bottom: 12px; line-height: 1.15; }
-    .card p { color: var(--muted); font-size: 15px; }
+.project{
+padding:30px;
+background:black;
+color:white;
+}
 
-    .timeline { display: grid; gap: 16px; }
+.project:nth-child(even){
+background:var(--card);
+color:black;
+}
 
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 28px;
-      padding: 26px;
-      background: var(--card);
-      border: 1px solid var(--line);
-    }
+.contact{
+background:black;
+color:white;
+padding:50px;
+display:grid;
+grid-template-columns:1fr auto;
+}
 
-    .time {
-      color: var(--accent);
-      font-weight: 900;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
+footer{
+padding:30px 0;
+display:flex;
+justify-content:space-between;
+}
 
-    .timeline-item h3 { font-size: 24px; letter-spacing: -0.04em; margin-bottom: 8px; }
-    .timeline-item p { color: var(--muted); max-width: 780px; }
+@media(max-width:900px){
 
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero,
+.projects,
+.grid-3,
+.contact{
+grid-template-columns:1fr;
+}
 
-    .skill {
-      padding: 10px 13px;
-      border: 1px solid var(--line);
-      background: var(--card);
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--accent-dark);
-    }
+.links{
+display:none;
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+h1{
+font-size:50px;
+}
 
-    .project {
-      min-height: 310px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: var(--ink);
-      color: var(--white);
-      padding: 30px;
-      border: 1px solid var(--ink);
-    }
+}
 
-    .project:nth-child(even) { background: var(--card); color: var(--ink); border-color: var(--line); }
-    .project small { color: #cdbba5; font-weight: 900; text-transform: uppercase; letter-spacing: 0.13em; }
-    .project:nth-child(even) small { color: var(--accent); }
-    .project h3 { font-size: 30px; line-height: 1; letter-spacing: -0.055em; margin: 22px 0 12px; }
-    .project p { color: rgba(255, 255, 255, 0.72); }
-    .project:nth-child(even) p { color: var(--muted); }
-
-    .contact {
-      background: var(--ink);
-      color: var(--white);
-      padding: 54px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .contact h2 { color: var(--white); margin-bottom: 18px; }
-    .contact p { color: rgba(255, 255, 255, 0.7); max-width: 700px; font-size: 18px; }
-    .contact .btn { border-color: var(--white); color: var(--ink); background: var(--white); }
-
-    footer {
-      padding: 34px 0;
-      color: var(--muted);
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      border-top: 1px solid var(--line);
-    }
-
-    @media (max-width: 900px) {
-      .links { display: none; }
-      .hero, .section-head, .timeline-item, .contact { grid-template-columns: 1fr; }
-      .grid-3, .projects, .stats { grid-template-columns: 1fr; }
-      .stat { border-right: none; border-bottom: 1px solid var(--line); }
-      .stat:last-child { border-bottom: none; }
-      section { padding: 62px 0; }
-    }
-
-    @media (max-width: 520px) {
-      .page { width: min(100% - 24px, 1180px); }
-      .hero { padding-top: 44px; }
-      .profile-card, .card, .timeline-item, .project, .contact { padding: 22px; }
-      h1 { font-size: 48px; }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <header class="topbar">
-    <nav class="page nav">
-      <a href="#home" class="brand" aria-label="Hemima Darivemula home">
-        <span class="brand-mark">HD</span>
-        <span>Hemima Darivemula</span>
-      </a>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#subjects">Subjects</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
 
-  <main id="home" class="page">
-    <section class="hero">
-      <div>
-        <div class="eyebrow"><span class="dot"></span> Fresher Teacher Portfolio</div>
-        <h1>Hemima Darivemula</h1>
-        <p class="lead">
-          Motivated B.Tech CSE(AIML) graduate seeking an entry-level Teacher position in a private school,
-          with interest in Mathematics, Computer Science and Basic Science. Known for communication,
-          patience, quick learning and willingness to grow in a classroom environment.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:hdarivemula@gmail.com">Email Hemima</a>
-          <a class="btn btn-secondary" href="tel:+919059577631">Call: 9059577631</a>
-        </div>
-        <div class="stats">
-          <div class="stat">
-            <strong>8.0</strong>
-            <span>B.Tech CGPA</span>
-          </div>
-          <div class="stat">
-            <strong>3</strong>
-            <span>Teaching subjects</span>
-          </div>
-          <div class="stat">
-            <strong>2</strong>
-            <span>Languages known</span>
-          </div>
-        </div>
-      </div>
+<header class="topbar">
 
-      <aside class="profile-card" aria-label="Profile summary card">
-        <div class="portrait">
-          <img src="src/photo.jpeg" alt="Hemima Darivemula - Teacher Profile Photo" />
-        </div>
-        <div class="profile-meta">
-          <div class="meta-row"><span>Name</span><span>Hemima Darivemula</span></div>
-          <div class="meta-row"><span>Location</span><span>Guntur, Andhra Pradesh</span></div>
-          <div class="meta-row"><span>Role Target</span><span>Entry-Level Teacher</span></div>
-          <div class="meta-row"><span>Email</span><span>hdarivemula@gmail.com</span></div>
-        </div>
-      </aside>
-    </section>
+<nav class="page nav">
 
-    <section id="about">
-      <div class="section-head">
-        <div class="label">About</div>
-        <div>
-          <h2>Patient, clear and ready for classroom responsibility.</h2>
-          <p class="section-copy">
-            Hemima Darivemula is a motivated fresher with a B.Tech background in Computer Science and
-            Artificial Intelligence & Machine Learning. She is interested in teaching Mathematics and Computer
-            subjects and brings communication skills, patience, time management and a strong willingness to learn.
-          </p>
-        </div>
-      </div>
-      <div class="grid-3">
-        <article class="card">
-          <div class="card-number">01</div>
-          <h3>Teaching Interest</h3>
-          <p>Interested in teaching Mathematics, Computer Science and Basic Science for private school students.</p>
-        </article>
-        <article class="card">
-          <div class="card-number">02</div>
-          <h3>Student-Friendly Nature</h3>
-          <p>Patient, communicative and capable of supporting classroom interaction with a learning-focused mindset.</p>
-        </article>
-        <article class="card">
-          <div class="card-number">03</div>
-          <h3>Technical Background</h3>
-          <p>B.Tech CSE(AIML) background with academic exposure to computer fundamentals and machine learning.</p>
-        </article>
-      </div>
-    </section>
+<div class="brand">
+<div class="brand-mark">HD</div>
+<div>Hemima Darivemula</div>
+</div>
 
-    <section id="subjects">
-      <div class="section-head">
-        <div class="label">Subjects</div>
-        <div>
-          <h2>Subjects interested to teach.</h2>
-          <p class="section-copy">
-            Hemima's resume highlights three teaching-interest areas suitable for an entry-level private school teacher role.
-          </p>
-        </div>
-      </div>
-      <div class="grid-3">
-        <article class="card">
-          <div class="card-number">MATH</div>
-          <h3>Mathematics</h3>
-          <p>Basic mathematics teaching with patience, explanation clarity and student-focused classroom support.</p>
-        </article>
-        <article class="card">
-          <div class="card-number">CS</div>
-          <h3>Computer Science</h3>
-          <p>Computer fundamentals, basic digital concepts and beginner-friendly technical explanation.</p>
-        </article>
-        <article class="card">
-          <div class="card-number">SCI</div>
-          <h3>Basic Science</h3>
-          <p>Simple science concepts with structured teaching and supportive classroom interaction.</p>
-        </article>
-      </div>
-    </section>
+<div class="links">
+<a href="#">About</a>
+<a href="#">Domains</a>
+<a href="#">Education</a>
+<a href="#">Skills</a>
+<a href="#">Projects</a>
+</div>
 
-    <section id="education">
-      <div class="section-head">
-        <div class="label">Education</div>
-        <div>
-          <h2>Academic background.</h2>
-          <p class="section-copy">
-            Strong academic foundation from school to engineering, with a focus on computer science and AI/ML.
-          </p>
-        </div>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item">
-          <div class="time">2022 – 2026</div>
-          <div>
-            <h3>B.Tech – CSE(AIML)</h3>
-            <p>St. Mary's Group of Institution, Guntur for Women. CGPA: 8.0.</p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="time">2020 – 2022</div>
-          <div>
-            <h3>Intermediate – MPC</h3>
-            <p>A.P.S.W.R.E.I.S, Vp South. CGPA: 7.89.</p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="time">2019 – 2020</div>
-          <div>
-            <h3>SSC / 10th Standard</h3>
-            <p>A.P.S.W.R.E.I.S, Vp South. CGPA: 8.7.</p>
-          </div>
-        </article>
-      </div>
-    </section>
+</nav>
 
-    <section id="skills">
-      <div class="section-head">
-        <div class="label">Skills</div>
-        <div>
-          <h2>Skills for teaching and classroom support.</h2>
-          <p class="section-copy">
-            A balanced skill set for a fresher teacher role, combining communication, classroom interaction,
-            basic teaching ability and digital tool usage.
-          </p>
-        </div>
-      </div>
-      <div class="skills">
-        <span class="skill">Communication Skills</span>
-        <span class="skill">Classroom Interaction</span>
-        <span class="skill">Basic Mathematics Teaching</span>
-        <span class="skill">Computer Fundamentals</span>
-        <span class="skill">MS Word</span>
-        <span class="skill">PowerPoint</span>
-        <span class="skill">Time Management</span>
-        <span class="skill">Quick Learner</span>
-        <span class="skill">Teamwork</span>
-        <span class="skill">Patience</span>
-        <span class="skill">Student Support</span>
-        <span class="skill">Professional Discipline</span>
-      </div>
-    </section>
+</header>
 
-    <section id="project">
-      <div class="section-head">
-        <div class="label">Academic Project</div>
-        <div>
-          <h2>Technology project with NLP and machine learning.</h2>
-          <p class="section-copy">
-            Her academic project shows technical understanding, problem-solving ability and exposure to AI/ML concepts.
-          </p>
-        </div>
-      </div>
-      <div class="projects">
-        <article class="project">
-          <div>
-            <small>Project Title</small>
-            <h3>Toxicity Progression Detection in Social Media Conversations</h3>
-            <p>
-              Developed an NLP-based toxicity detection system to analyze social media conversations and classify
-              toxicity progression levels using machine learning techniques for early identification of harmful interactions.
-            </p>
-          </div>
-          <span>NLP • Machine Learning • Social Media Analysis</span>
-        </article>
-        <article class="project">
-          <div>
-            <small>Teaching Value</small>
-            <h3>Computer Science Foundation</h3>
-            <p>
-              This project supports her ability to explain computer science basics, machine learning ideas and real-world
-              technology applications to beginner-level students.
-            </p>
-          </div>
-          <span>Beginner-friendly technical explanation</span>
-        </article>
-      </div>
-    </section>
+<main class="page">
 
-    <section id="languages">
-      <div class="section-head">
-        <div class="label">Languages</div>
-        <div>
-          <h2>Languages known.</h2>
-          <p class="section-copy">Telugu and English.</p>
-        </div>
-      </div>
-      <div class="skills">
-        <span class="skill">Telugu</span>
-        <span class="skill">English</span>
-      </div>
-    </section>
+<section class="hero">
 
-    <section id="contact">
-      <div class="contact">
-        <div>
-          <h2>Contact Hemima.</h2>
-          <p>
-            Available for entry-level teacher opportunities in private schools, especially for Mathematics,
-            Computer Science and Basic Science teaching support.
-          </p>
-        </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end;">
-          <a class="btn" href="mailto:hdarivemula@gmail.com">hdarivemula@gmail.com</a>
-          <a class="btn" href="tel:+919059577631">9059577631</a>
-        </div>
-      </div>
-    </section>
-  </main>
+<div>
 
-  <footer class="page">
-    <span>© 2026 Hemima Darivemula. All rights reserved.</span>
-    <span>Teacher Portfolio • Guntur, Andhra Pradesh</span>
-  </footer>
+<div class="eyebrow">
+<span class="dot"></span>
+AIML Engineer Portfolio
+</div>
+
+<h1>Hemima Darivemula</h1>
+
+<p class="lead">
+
+B.Tech CSE(AIML) graduate passionate about Artificial Intelligence, Machine Learning and NLP. Interested in AI Engineer, ML Engineer and Research opportunities while building intelligent systems.
+
+</p>
+
+<div class="hero-actions">
+
+<a class="btn btn-primary">
+Email
+</a>
+
+<a class="btn">
+Contact
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>8.0</strong>
+<p>B.Tech CGPA</p>
+</div>
+
+<div class="stat">
+<strong>1+</strong>
+<p>AI Projects</p>
+</div>
+
+<div class="stat">
+<strong>AIML</strong>
+<p>Specialization</p>
+</div>
+
+</div>
+
+</div>
+
+<aside class="profile-card">
+
+<div class="portrait">
+
+<img src="src/photo.jpeg">
+
+</div>
+
+<div class="meta-row">
+<span>Role</span>
+<span>AIML Engineer</span>
+</div>
+
+<div class="meta-row">
+<span>Location</span>
+<span>Guntur</span>
+</div>
+
+<div class="meta-row">
+<span>Email</span>
+<span>hdarivemula@gmail.com</span>
+</div>
+
+</aside>
+
+</section>
+
+<section>
+
+<div class="section-head">
+
+<div class="label">
+ABOUT
+</div>
+
+<h2>Aspiring AI & Machine Learning Engineer</h2>
+
+<p>
+
+Interested in Artificial Intelligence, NLP, Machine Learning and research applications with academic exposure to intelligent systems and AI solutions.
+
+</p>
+
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>AI systems and intelligent automation.</p>
+</div>
+
+<div class="card">
+<h3>Machine Learning</h3>
+<p>Predictive systems and model development.</p>
+</div>
+
+<div class="card">
+<h3>NLP & Research</h3>
+<p>Text processing and language understanding.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-head">
+
+<div class="label">
+DOMAINS
+</div>
+
+<h2>Domains of Interest</h2>
+
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Machine Learning</h3>
+</div>
+
+<div class="card">
+<h3>NLP</h3>
+</div>
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-head">
+
+<div class="label">
+SKILLS
+</div>
+
+<h2>Technical Skills</h2>
+
+</div>
+
+<div class="skills">
+
+<span class="skill">Python</span>
+<span class="skill">Machine Learning</span>
+<span class="skill">Artificial Intelligence</span>
+<span class="skill">NLP</span>
+<span class="skill">Pandas</span>
+<span class="skill">NumPy</span>
+<span class="skill">Scikit-learn</span>
+<span class="skill">Deep Learning</span>
+<span class="skill">Problem Solving</span>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-head">
+
+<div class="label">
+PROJECT
+</div>
+
+<h2>Academic Project</h2>
+
+</div>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>
+
+Toxicity Progression Detection in Social Media Conversations
+
+</h3>
+
+<p>
+
+Developed NLP based toxicity detection using Machine Learning techniques to classify toxicity progression levels in social media conversations.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>
+AI & NLP Application
+</h3>
+
+<p>
+
+Demonstrates exposure to NLP, ML workflow and AI problem solving.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="contact">
+
+<div>
+
+<h2>
+Let's Build AI Solutions
+</h2>
+
+<p>
+
+Open to AI Engineer, ML Engineer and Research opportunities.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="page">
+
+<span>
+©2026 Hemima Darivemula
+</span>
+
+<span>
+AIML Engineer Portfolio
+</span>
+
+</footer>
+
 </body>
 </html>
