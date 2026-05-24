@@ -1,1 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hemima Darivemula | Resume</title>
+  <meta name="description" content="Resume of Hemima Darivemula, AIML Engineer and Computer Science professional." />
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --paper: #ffffff;
+      --ink: #111827;
+      --muted: #5b6472;
+      --line: #e5e7eb;
+      --brand: #111827;
+      --accent: #2563eb;
+      --soft: #eef4ff;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+
+    .resume-shell {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .top-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: 1px solid var(--brand);
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 0;
+      letter-spacing: 0.2px;
+      transition: 0.2s ease;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--brand);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.9;
+    }
+
+    .resume {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 1120px;
+    }
+
+    .sidebar {
+      background: #111827;
+      color: #fff;
+      padding: 38px 30px;
+    }
+
+    .main {
+      padding: 42px 46px;
+    }
+
+    .initials {
+      width: 72px;
+      height: 72px;
+      border: 1px solid rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.08;
+      letter-spacing: -1.2px;
+      margin-bottom: 10px;
+    }
+
+    .role {
+      font-size: 15px;
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      margin-bottom: 24px;
+    }
+
+    .summary {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 640px;
+      margin-bottom: 28px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section:first-child {
+      margin-top: 0;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--brand);
+      border-bottom: 2px solid var(--brand);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .sidebar .section-title {
+      color: #fff;
+      border-bottom-color: rgba(255,255,255,0.35);
+    }
+
+    .contact-list,
+    .skill-list,
+    .language-list {
+      list-style: none;
+    }
+
+    .contact-list li,
+    .language-list li {
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    .label {
+      display: block;
+      color: rgba(255,255,255,0.55);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-list li {
+      border: 1px solid rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.86);
+      padding: 6px 9px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .item {
+      margin-bottom: 22px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 19px;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+    }
+
+    .meta {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .submeta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .bullets {
+      margin-left: 18px;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .bullets li {
+      margin-bottom: 7px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      background: var(--soft);
+      color: #1d4ed8;
+      padding: 6px 9px;
+      font-size: 12px;
+      font-weight: 800;
+      border: 1px solid #dbeafe;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 22px 0 28px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      padding: 14px;
+      background: #fafafa;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 860px) {
+      body {
+        padding: 18px 10px;
+      }
+
+      .resume {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar,
+      .main {
+        padding: 28px 22px;
+      }
+
+      .item-head {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .meta {
+        white-space: normal;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+
+      .top-actions {
+        display: none;
+      }
+
+      .resume-shell {
+        max-width: 100%;
+      }
+
+      .resume {
+        box-shadow: none;
+        border: none;
+        min-height: auto;
+      }
+
+      .sidebar {
+        background: #111827 !important;
+        color: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-shell">
+    <div class="top-actions">
+      <a class="btn" href="/Hemima_Darivemula_Resume.pdf" download>Download PDF</a>
+      <a class="btn secondary" href="/Hemima_Darivemula_Resume.docx" download>Download DOCX</a>
+      <button class="btn secondary" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <article class="resume">
+      <aside class="sidebar">
+        <div class="initials">HD</div>
+
+        <section class="section">
+          <div class="section-title">Contact</div>
+          <ul class="contact-list">
+            <li><span class="label">Email</span>hdarivemula@gmail.com</li>
+            <li><span class="label">Phone</span>9059577631</li>
+            <li><span class="label">Location</span>Guntur, Andhra Pradesh, India</li>
+            <li><span class="label">Portfolio</span>hemima-portfolio.vercel.app</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Core Skills</div>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>NLP</li>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>scikit-learn</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>SQL</li>
+            <li>EDA</li>
+            <li>Git</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Languages</div>
+          <ul class="language-list">
+            <li><span class="label">Telugu</span>Native</li>
+            <li><span class="label">English</span>Professional Proficiency</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header>
+          <div class="role">AIML Engineer & ML Specialist</div>
+          <h1>Hemima Darivemula</h1>
+          <p class="summary">
+            Results-driven AIML Engineer with strong academic foundation in Computer Science and Artificial Intelligence. Skilled in Machine Learning, Deep Learning, Natural Language Processing, data preprocessing, model development, and intelligent system design. Interested in building practical, scalable, and production-ready AI solutions.
+          </p>
+
+          <div class="stats">
+            <div class="stat"><strong>8.0</strong><span>B.Tech CGPA</span></div>
+            <div class="stat"><strong>6+</strong><span>Tech Proficiencies</span></div>
+            <div class="stat"><strong>5+</strong><span>ML Projects</span></div>
+          </div>
+        </header>
+
+        <section class="section">
+          <div class="section-title">Professional Summary</div>
+          <p>
+            Dedicated AI/ML professional with knowledge of supervised and unsupervised learning, neural networks, NLP, computer vision concepts, statistical analysis, and model evaluation. Capable of converting business or research problems into structured machine learning workflows, from data preparation to model training and performance improvement.
+          </p>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Education</div>
+          <div class="item">
+            <div class="item-head">
+              <h2>B.Tech in Computer Science & Engineering (AIML)</h2>
+              <div class="meta">2022 – 2026</div>
+            </div>
+            <div class="submeta">St. Mary's Group of Institution, Guntur for Women • CGPA: 8.0/10</div>
+            <p>Specialized coursework includes Machine Learning, Deep Learning, Natural Language Processing, Data Science, and Advanced Algorithms.</p>
+          </div>
+
+          <div class="item">
+            <div class="item-head">
+              <h2>Intermediate Education – MPC</h2>
+              <div class="meta">2020 – 2022</div>
+            </div>
+            <div class="submeta">A.P.S.W.R.E.I.S, Vp South • CGPA: 7.89/10</div>
+            <p>Built a strong foundation in Mathematics, Physics, Chemistry, logical reasoning, and analytical problem solving.</p>
+          </div>
+
+          <div class="item">
+            <div class="item-head">
+              <h2>Secondary School Certificate / 10th Standard</h2>
+              <div class="meta">2019 – 2020</div>
+            </div>
+            <div class="submeta">A.P.S.W.R.E.I.S, Vp South • CGPA: 8.7/10</div>
+            <p>Completed foundational education with strong performance in STEM-related subjects.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Technical Expertise</div>
+          <div class="item">
+            <div class="item-head">
+              <h2>Machine Learning & Data Science</h2>
+            </div>
+            <ul class="bullets">
+              <li>Knowledge of regression, classification, clustering, anomaly detection, cross-validation, and model evaluation metrics.</li>
+              <li>Experience with data preprocessing, feature engineering, exploratory data analysis, and statistical interpretation.</li>
+              <li>Hands-on familiarity with Python libraries such as Pandas, NumPy, scikit-learn, TensorFlow, and PyTorch.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-head">
+              <h2>Deep Learning & Natural Language Processing</h2>
+            </div>
+            <ul class="bullets">
+              <li>Understanding of neural networks, CNNs, RNNs, LSTMs, GRUs, attention mechanisms, transfer learning, and transformer-based NLP concepts.</li>
+              <li>Familiar with text preprocessing, tokenization, sentiment analysis, text classification, embeddings, and language modeling basics.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Project Experience</div>
+          <div class="item">
+            <div class="item-head">
+              <h2>Toxicity Progression Detection in Social Media Conversations</h2>
+              <div class="meta">Primary Project</div>
+            </div>
+            <p>
+              Developed an NLP-based toxicity detection concept to analyze social media conversations and classify harmful interaction progression. The project demonstrates an end-to-end machine learning workflow including text processing, feature extraction, classification logic, model evaluation, and real-world AI application design.
+            </p>
+            <div class="chips">
+              <span class="chip">NLP</span>
+              <span class="chip">Deep Learning</span>
+              <span class="chip">Classification</span>
+              <span class="chip">Social Media Analytics</span>
+              <span class="chip">Transformers</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Professional Strengths</div>
+          <ul class="bullets">
+            <li>Strong ability to understand technical requirements and convert them into structured AI/ML solutions.</li>
+            <li>Good foundation in documentation, communication, and collaborative project development.</li>
+            <li>Quick learner with interest in applied artificial intelligence, research, and production-grade ML systems.</li>
+          </ul>
+        </section>
+      </main>
+    </article>
+  </div>
+</body>
+</html>
